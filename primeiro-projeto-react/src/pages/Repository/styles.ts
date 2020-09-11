@@ -57,6 +57,9 @@ export const RepositoryInfo = styled.section`
     margin-top: 40px;
 
     li {
+      & + li {
+        margin-left: 80px;
+      }
       strong {
         display: block;
         font-size: 36px;
@@ -66,7 +69,52 @@ export const RepositoryInfo = styled.section`
       span {
         display: block;
         margin-top: 4px;
+        color: #6c6c80;
       }
+    }
+  }
+`;
+
+export const Issues = styled.div`
+  margin-top: 80px;
+
+  a {
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateX(10px);
+    }
+
+    & + a {
+      margin-top: 16px;
+    }
+
+    div {
+      margin: 0 20px;
+      flex: 1;
+
+      strong {
+        font-size: 20px;
+        color: #3d3d4d;
+      }
+
+      p {
+        font-size: 18px;
+        color: #a8a8b3;
+        margin-top: 4px;
+      }
+    }
+
+    svg {
+      margin-left: auto;
+      color: #cbcbd6;
     }
   }
 `;
